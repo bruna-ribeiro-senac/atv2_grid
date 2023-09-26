@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400;500;700&display=swap");
+:root {
+  --fundo-principal: #ffffff;
+  --cinza-fundo: #f1f1f1;
+  --vermelho-titulo: #8d0606;
+  --cinza-texto: #8c8888;
+  --cinza--rodape: #c4c4c4;
+}
+* {
+  font-family: Roboto, sans-serif;
+}
+body {
+  display: grid;
+  grid-template-columns:1fr;
+  grid-template-rows: 5em 90vh 15em 1fr 100vh 5em;
+}
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3em;
+  
+}
+/* @media (max-width:480px){
+  .cabecalho__logo{
+    display: none;
+  }
+  
+  
+} */
+.menu__lista {
+  display: flex;
+  list-style-type: none;
+}
+.menu__lista li a {
+  padding: 1em;
+  text-decoration: none;
+  color: var(--cinza-texto);
+}
+.menu__lista li a.ativo {
+  font-weight: bold;
+}
+.menu__lista li a:hover {
+  text-decoration: underline;
+}
+.banner {
+  background-image: url(../img/banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.banner__titulo {
+  color: var(--fundo-principal);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.75);
+  font-family: Pacifico;
+  font-size: 5.0625rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.sobre {
+  margin: 2em 0;
+  height: 30vh;
+}
+.secao__titulo {
+  color: var(--vermelho-titulo);
+  text-align: center;
+  font-family: Pacifico;
+  font-size: 3.1875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.secao__paragrafo {
+  color: var(--cinza-texto);
+  text-align: center;
+  font-family: Roboto;
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.receitas {
+  background-color: var(--cinza-fundo);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+  padding: 5em 0;
+}
+.receitas__card {
+  width: 17.875em;
+  background-color: var(--fundo-principal);
+  border: 1px solid var(--cinza--rodape);
+  margin: 1em 0;
+}
+.receitas__conteudo {
+  padding: 0.5em;
+}
+.receitas__conteudo h3 {
+  font-size: 1.4375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.receitas__conteudo p {
+  text-align: justify;
+  font-size: 1.1875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.receitas button {
+  border-radius: 0.3125rem;
+  background-color: var(--vermelho-titulo);
+  border: none;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--fundo-principal);
+  padding: 0.5em;
+  text-align: center;
+}
+.quemsomos {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.quemsomos__caixa {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/* .quemsomos__caixa {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+} */
+.quemsomos__conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2m;
+}
+.quemsomos__conteudo img {
+  border-radius: 50%;
+}
+.quemsomos__conteudo h4 {
+  font-family: Pacifico;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--vermelho-titulo);
+}
+.quemsomos__conteudo p {
+  font-family: Roboto;
+  font-size: 1.3em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--cinza-texto);
+}
+.rodape {
+  background-color: var(--cinza-texto);
+  height: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.rodape p {
+  color: var(--fundo-principal);
+  padding-right: 1em;
+  font-family: Roboto;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
