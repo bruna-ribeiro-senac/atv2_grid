@@ -13,6 +13,9 @@ body {
   display: grid;
   grid-template-columns:1fr;
   grid-template-rows: 5em 90vh 15em 1fr 100vh 5em;
+  @media (max-width:768px){
+    grid-template-rows: 5em 50vh 15em 1fr 100vh 3em;
+  }
 }
 .cabecalho {
   display: flex;
@@ -21,13 +24,18 @@ body {
   padding: 0 3em;
   
 }
-/* @media (max-width:480px){
+@media (max-width:480px){
   .cabecalho__logo{
     display: none;
   }
+  .cabecalho{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.3em;
+    
+  }
   
-  
-} */
+}
 .menu__lista {
   display: flex;
   list-style-type: none;
@@ -36,6 +44,9 @@ body {
   padding: 1em;
   text-decoration: none;
   color: var(--cinza-texto);
+  @media (max-width:480px) {
+    padding: 0 1em;
+  }
 }
 .menu__lista li a.ativo {
   font-weight: bold;
@@ -62,6 +73,15 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  text-align: center;
+}
+@media(max-width:768px){
+  .banner{
+    height: 50vh;
+  }
+  .banner__titulo{
+    font-size: 3em;
+  }
 }
 .sobre {
   margin: 2em 0;
@@ -76,6 +96,11 @@ body {
   font-weight: 400;
   line-height: normal;
 }
+@media (max-width:768px){
+  .secao__titulo{
+    font-size: 2em;
+  }
+}
 .secao__paragrafo {
   color: var(--cinza-texto);
   text-align: center;
@@ -84,6 +109,10 @@ body {
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+  @media(max-width:768px){
+    padding: 0 1em;
+    font-size: 1.5em;
+  }
 }
 .receitas {
   background-color: var(--cinza-fundo);
@@ -93,12 +122,18 @@ body {
   align-items: center;
   justify-items: center;
   padding: 5em 0;
+  @media (max-width:768px) {
+    grid-template-columns: repeat(2,1fr);
+
+
+  }
 }
 .receitas__card {
   width: 17.875em;
   background-color: var(--fundo-principal);
   border: 1px solid var(--cinza--rodape);
   margin: 1em 0;
+ 
 }
 .receitas__conteudo {
   padding: 0.5em;
@@ -133,11 +168,16 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+ 
 }
 .quemsomos__caixa {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  @media (max-width:768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 /* .quemsomos__caixa {
   display: grid;
@@ -150,9 +190,16 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 0.2m;
+  @media screen {
+    gap: 0;
+
+  }
 }
 .quemsomos__conteudo img {
   border-radius: 50%;
+  @media (max-width:768px) {
+    width: 50%;
+  }
 }
 .quemsomos__conteudo h4 {
   font-family: Pacifico;
@@ -161,10 +208,16 @@ body {
   font-weight: 400;
   line-height: normal;
   color: var(--vermelho-titulo);
+  @media (max-width:480px) {
+    font-size: 1.5em;
+  }
 }
 .quemsomos__conteudo p {
   font-family: Roboto;
   font-size: 1.3em;
+  @media (max-width:480px) {
+    font-size: 1em;
+  }
   font-style: normal;
   font-weight: 400;
   line-height: normal;
