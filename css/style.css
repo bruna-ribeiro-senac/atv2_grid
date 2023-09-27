@@ -12,10 +12,10 @@
 body {
   display: grid;
   grid-template-columns:1fr;
-  grid-template-rows: 5em 90vh 15em 1fr 100vh 5em;
-  @media (max-width:768px){
+  /* grid-template-rows: 5em 90vh 15em 1fr 100vh 5em; */
+  /* @media (max-width:768px){
     grid-template-rows: 5em 50vh 15em 1fr 100vh 3em;
-  }
+  } */
  
   
 }
@@ -24,6 +24,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 3em;
+  height: 5em;
   
 }
 @media (max-width:480px){
@@ -34,6 +35,7 @@ body {
     display: flex;
     justify-content: space-around;
     font-size: 1.3em;
+    height: 3em;
     
   }
   
@@ -124,11 +126,12 @@ body {
   align-items: center;
   justify-items: center;
   padding: 5em 0;
-  @media (max-width:768px) or (orientation:landscape) {
+  height: 1fr;
+  @media (max-width:768px)  {
     grid-template-columns: repeat(2,1fr);
-
-
   }
+
+ 
 }
 .receitas__card {
   width: 17.875em;
@@ -166,18 +169,18 @@ body {
   text-align: center;
 }
 .quemsomos {
-  height: 100vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  @media (orientation:landscape) {
-    height: 100vh;
-    margin: 10em 0;
-  }
-  /* @media (max-width:768px) {
+  /* @media (orientation:landscape) {
     height: 100vh;
     margin: 10em 0;
   } */
+  @media (max-width:768px) {
+    height: 100vh;
+    margin: 8em 0;
+  }
  
 }
 .quemsomos__caixa {
@@ -207,9 +210,12 @@ body {
 }
 .quemsomos__conteudo img {
   border-radius: 50%;
-  @media (max-width:768px) or (orientation:landscape) {
+  @media (max-width:768px)  {
     width: 50%;
   }
+  /* @media (max-width:768px) and (orientation:landscape)  {
+    width: 50%;
+  } */
 }
 .quemsomos__conteudo h4 {
   font-family: Pacifico;
@@ -239,9 +245,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: end;
-  @media (orientation:landscape) {
+  /* @media (orientation:landscape) {
     margin-top: 20em;
-  }
+  } */
   /* @media (max-width:768px) {
     margin-top: 20em;
   } */
